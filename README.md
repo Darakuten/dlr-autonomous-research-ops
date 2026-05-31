@@ -1,7 +1,7 @@
 # NeuroPilot
 
 <p align="center">
-  <strong>AI × Neuroengineering / Neuroscience に特化した研究自動化オペレーティングシステム</strong><br/>
+  <strong>Premium AI-native research operating system for Neuroengineering & Neuroscience</strong><br/>
   Multi-agent orchestration for ML/DL-first neural research teams.
 </p>
 
@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="doc/visualizations/dl-research-overview.png" alt="DLR overview" width="920" />
+  <img src="doc/visualizations/dl-research-overview.png" alt="NeuroPilot overview" width="920" />
 </p>
 
 <p align="center">
@@ -25,18 +25,7 @@
 
 ---
 
-## 日本語サマリー
-
-NeuroPilot は、**AI × 神経工学 / 神経科学**の研究運用に特化したマルチエージェント制御基盤です。  
-仮説立案、先行研究調査、ML/DL実験、主張監査、論文成果物作成までを、一つのオペレーションレイヤーで統合します。
-
-### このリポジトリが強い領域
-
-- **対象領域**: neural signals, BCI, neurophysiology, computational neuroscience
-- **手法領域**: ML/DL, representation learning, 再現性検証, 比較評価
-- **運用領域**: 研究ログ追跡、証拠連結、citation/claim audit、PIレビュー
-
-## English Summary
+## Product Overview
 
 NeuroPilot is a Paperclip-based control plane purpose-built for
 **AI-first neuroengineering and neuroscience research operations**.
@@ -55,6 +44,12 @@ It coordinates specialized agents for:
 - **Traceable science**: issues/comments/runs preserve full decision and evidence history
 - **Governed autonomy**: heartbeat automation with budget and approval gates
 - **Faster paper loop**: from idea to draft with structured QA checkpoints
+
+## Domain Specialization
+
+- **Research domain**: neural signals, BCI, neurophysiology, computational neuroscience
+- **Methods domain**: ML/DL pipelines, representation learning, reproducibility-first evaluation
+- **Ops domain**: evidence traceability, citation/claim audits, PI-centric approval gates
 
 ## Demo
 
