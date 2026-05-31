@@ -1,71 +1,83 @@
-<p align="center">
-  <img src="doc/assets/header.png" alt="Paperclip — runs your business" width="720" />
-</p>
+# DLR Autonomous Research Ops
 
-<p align="center">
-  <a href="#quickstart"><strong>Quickstart</strong></a> &middot;
-  <a href="https://paperclip.ing/docs"><strong>Docs</strong></a> &middot;
-  <a href="https://github.com/paperclipai/paperclip"><strong>GitHub</strong></a> &middot;
-  <a href="https://discord.gg/m4HZY7xNG3"><strong>Discord</strong></a> &middot;
-  <a href="https://x.com/papercliping"><strong>Twitter</strong></a>
-</p>
+> Multi-agent control plane for AI-first research labs.
+>  
+> PI-ready dashboard: `http://127.0.0.1:3100/DLR/dashboard`
 
-<p align="center">
-  <a href="https://github.com/paperclipai/paperclip/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License" /></a>
-  <a href="https://github.com/paperclipai/paperclip/stargazers"><img src="https://img.shields.io/github/stars/paperclipai/paperclip?style=flat" alt="Stars" /></a>
-  <a href="https://discord.gg/m4HZY7xNG3"><img src="https://img.shields.io/discord/000000000?label=discord" alt="Discord" /></a>
-</p>
+DLR Autonomous Research Ops is a research automation system built on top of Paperclip.
+It orchestrates specialized AI agents across the full research lifecycle: hypothesis design,
+literature scan, experiment execution, claim audit, and publication artifact generation.
 
-<br/>
+## Why this project exists
 
-<div align="center">
-  <video src="https://github.com/user-attachments/assets/773bdfb2-6d1e-4e30-8c5f-3487d5b70c8f" width="600" controls></video>
-</div>
+Research teams usually lose time in context switching: Slack threads, notebooks, scripts,
+manual checkpoints, and ad-hoc handoffs between people and tools.
 
-<br/>
+This system turns that workflow into a single operating layer:
 
-## What is Paperclip?
+- One dashboard for strategy, execution, and review
+- One issue system with traceable evidence and decisions
+- One agent organization with explicit roles, budgets, and approvals
+- One reproducible path from idea to paper draft
 
-# Open-source orchestration for zero-human companies
+## Core capabilities
 
-**If OpenClaw is an _employee_, Paperclip is the _company_**
+- **Agent org chart orchestration**: PI, ideator, lit-scout, experimenter, engineer, critic, writer, worker, mentor
+- **Goal-driven execution**: every task inherits project and company goals
+- **Heartbeat automation**: scheduled autonomous work with recoverable runs
+- **Claim integrity pipeline**: citation checks, claim-evidence validation, and review gates
+- **Research artifact production**: paper draft support, slides/poster pipelines, and reusable templates
 
-Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. Bring your own agents, assign goals, and track your agents' work and costs from one dashboard.
+## PI demo flow (5 minutes)
 
-It looks like a task manager — but under the hood it has org charts, budgets, governance, goal alignment, and agent coordination.
+1. Open the dashboard: `http://127.0.0.1:3100/DLR/dashboard`
+2. Show active projects and issue status
+3. Open one issue and inspect the run transcript
+4. Review attached evidence and generated outputs
+5. Walk through governance/approval checkpoints
 
-**Manage business goals, not pull requests.**
+## Local quickstart
 
-|        | Step            | Example                                                            |
-| ------ | --------------- | ------------------------------------------------------------------ |
-| **01** | Define the goal | _"Build the #1 AI note-taking app to $1M MRR."_                    |
-| **02** | Hire the team   | CEO, CTO, engineers, designers, marketers — any bot, any provider. |
-| **03** | Approve and run | Review strategy. Set budgets. Hit go. Monitor from the dashboard.  |
+```bash
+pnpm install
+pnpm dev
+```
 
-<br/>
+Then open:
 
-> **COMING SOON: Clipmart** — Download and run entire companies with one click. Browse pre-built company templates — full org structures, agent configs, and skills — and import them into your Paperclip instance in seconds.
+- API/UI: `http://localhost:3100`
+- DLR dashboard: `http://127.0.0.1:3100/DLR/dashboard`
 
-<br/>
+## Research company package
 
-<div align="center">
-<table>
-  <tr>
-    <td align="center"><strong>Works<br/>with</strong></td>
-    <td align="center"><img src="doc/assets/logos/openclaw.svg" width="32" alt="OpenClaw" /><br/><sub>OpenClaw</sub></td>
-    <td align="center"><img src="doc/assets/logos/claude.svg" width="32" alt="Claude" /><br/><sub>Claude Code</sub></td>
-    <td align="center"><img src="doc/assets/logos/codex.svg" width="32" alt="Codex" /><br/><sub>Codex</sub></td>
-    <td align="center"><img src="doc/assets/logos/cursor.svg" width="32" alt="Cursor" /><br/><sub>Cursor</sub></td>
-    <td align="center"><img src="doc/assets/logos/bash.svg" width="32" alt="Bash" /><br/><sub>Bash</sub></td>
-    <td align="center"><img src="doc/assets/logos/http.svg" width="32" alt="HTTP" /><br/><sub>HTTP</sub></td>
-  </tr>
-</table>
+The included research company package lives in `companies/dl-research`.
 
-<em>If it can receive a heartbeat, it's hired.</em>
+Import it into a fresh Paperclip instance:
 
-</div>
+```bash
+pnpm paperclipai company import companies/dl-research --target new --newCompanyName "DL Research"
+```
 
-<br/>
+## Architecture
+
+This repository is built on Paperclip's control-plane stack:
+
+- `server/`: orchestration API and execution services
+- `ui/`: React dashboard and operator workflows
+- `packages/db/`: schema and migrations
+- `packages/adapters/`: agent adapters
+- `companies/dl-research/`: research-focused org template, skills, and workflows
+
+## Positioning
+
+This is not another prompt playground.
+It is an operations system for running a research lab with AI agents as first-class team members.
+
+---
+
+## Upstream Paperclip documentation
+
+The original Paperclip feature and ecosystem documentation follows below.
 
 ## Paperclip is right for you if
 

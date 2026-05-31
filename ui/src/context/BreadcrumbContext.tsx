@@ -13,6 +13,7 @@ interface BreadcrumbContextValue {
 }
 
 const BreadcrumbContext = createContext<BreadcrumbContextValue | null>(null);
+const APP_TITLE = "DLR Research Ops";
 
 function breadcrumbsEqual(left: Breadcrumb[], right: Breadcrumb[]) {
   if (left === right) return true;
@@ -39,10 +40,10 @@ export function BreadcrumbProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (breadcrumbs.length === 0) {
-      document.title = "Paperclip";
+      document.title = APP_TITLE;
     } else {
       const parts = [...breadcrumbs].reverse().map((b) => b.label);
-      document.title = `${parts.join(" · ")} · Paperclip`;
+      document.title = `${parts.join(" · ")} · ${APP_TITLE}`;
     }
   }, [breadcrumbs]);
 
