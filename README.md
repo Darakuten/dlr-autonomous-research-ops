@@ -18,6 +18,7 @@
 
 <p align="center">
   <a href="doc/visualizations/dl-research-overview.png"><strong>Social Preview Image</strong></a> ·
+  <a href="#workflow-demo-90-seconds"><strong>Workflow Demo</strong></a> ·
   <a href="companies/dl-research"><strong>DL Research Company Package</strong></a> ·
   <a href="doc/visualizations/dl-research-overview.pdf"><strong>Architecture PDF</strong></a>
 </p>
@@ -44,6 +45,22 @@ It coordinates specialized agents for:
 - **Governed autonomy**: heartbeat automation with budget and approval gates
 - **Faster paper loop**: from idea to draft with structured QA checkpoints
 
+## Workflow Demo (90 seconds)
+
+This project is best understood as a single, continuous workflow:
+**hypothesis generation -> experiment execution -> paper artifact generation**.
+
+Use this demo sequence in PI presentations:
+
+- **00:00-00:20** Hypothesis generation in the browser UI (issue + owner + success criteria)
+- **00:20-00:50** Experiment execution (run kickoff, status, and evidence/log artifacts)
+- **00:50-01:20** Claim/citation audit gate
+- **01:20-01:30** Paper output generation (PDF/slides/poster)
+
+Demo playbook:
+
+- `doc/DEMO_VIDEO_PLAYBOOK.md` (shot list, script, and narration guide)
+
 ## Domain Specialization
 
 - **Research domain**: neural signals, BCI, neurophysiology, computational neuroscience
@@ -54,6 +71,7 @@ It coordinates specialized agents for:
 
 - **Architecture preview**: `doc/visualizations/dl-research-overview.png`
 - **Presentation PDF**: `doc/visualizations/dl-research-overview.pdf`
+- **Workflow demo playbook**: `doc/DEMO_VIDEO_PLAYBOOK.md`
 
 ## PI demo flow (5 minutes)
 
@@ -79,6 +97,7 @@ Then open:
 - Do not publish direct local dashboard URLs in public docs.
 - Running agents may consume model tokens/costs depending on local configuration.
 - Keep dashboard access private and enable explicit approval/budget gates before execution.
+- Use a pre-recorded demo for public sharing; avoid live runs in open presentations.
 
 ## Import the research company
 
